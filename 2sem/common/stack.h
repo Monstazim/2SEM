@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdexcept>
 using namespace std;
 /// <summary>
 /// Объявление шаблона
@@ -41,10 +41,10 @@ public:
 	{
 		if (top != nullptr)
 		{
-			T TopValue = top->data;
+			T topValue = top->data;
 			top = top->next;
 			--counter;
-			return TopValue;
+			return topValue;
 		}
 		else
 		{
@@ -64,7 +64,7 @@ public:
 		}
 		else
 		{
-			cerr << "Stack is empty" << endl;
+			throw out_of_range("Stack is empty");
 		}
 	}
 
