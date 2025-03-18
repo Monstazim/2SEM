@@ -48,7 +48,7 @@ public:
 		}
 		else
 		{
-			cerr << "Stack is empty" << endl;
+			throw out_of_range("Stack is empty");
 		}
 	}
 
